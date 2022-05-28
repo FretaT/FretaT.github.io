@@ -1,0 +1,28 @@
+body {
+    background-color: rosybrown;
+    font-size: large;
+}
+
+h1 {
+    color: rebeccapurple;
+    font-size: 40px;
+    margin: 0px;
+    text-align: left;
+}
+
+h2 {
+    color: rebeccapurple;
+    font-size: 24px;
+    margin: 0pt;
+    text-align: left;
+}
+
+#facial{ 
+    width: 320px;
+    padding: 10px;
+    vertical-align: text-bottom;
+}
+#hh{
+    padding: 10px;
+    vertical-align: text-bottom;
+}
