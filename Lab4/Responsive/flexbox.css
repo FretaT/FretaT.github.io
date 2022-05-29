@@ -10,17 +10,17 @@ body {
 .header {
     padding: 60px;
     text-align: center;
-    background: #1abc9c;
-    color: white;
+    background: #abd2ca;
+    color: black;
 }
 /* Style the top navigation bar */
-.navbar {
+.Bar {
     display: flex;
     background-color: darkslategray;
 }
 
 /* Style the navigation bar links */
-.navbar a {
+.Bar a {
     color: white;
     padding: 14px 20px;
     text-decoration: none;
@@ -28,13 +28,13 @@ body {
 }
 
 /* Change color on hover */
-.navbar a:hover {
+.Bar a:hover {
     background-color: #ddd;
     color: black;
 }
 /* Create two unequal columns that sits next to each other */
 /* Column container */
-.row {
+.col {
     display: flex;
     flex-wrap: wrap;
     height:500px;
@@ -42,19 +42,19 @@ body {
 /* Sidebar/left column */
 .left {
     flex: 33%;
-    background-color: gray;
+    background-color: rgb(170, 169, 169);
     padding: 20px;
 }
 .middle {
     flex: 33%;
-    background-color: lightgray;
+    background-color: rgb(188, 189, 190);
     padding: 20px;
 }
 
 /* Main column */
 .right {
     flex: 33%;
-    background-color: gray;
+    background-color:rgb(209, 206, 206);
     padding: 20px;
 }
 
@@ -62,7 +62,8 @@ body {
 .footer {
     padding: 20px;
     text-align: center;
-    background: #2F4F4F;
+    background: darkslategray;
+    color: white;
 }
 /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
@@ -73,6 +74,7 @@ body {
     .middle{
         flex-wrap: wrap;
         flex-grow: 3;
+        order: 3;
     }
 }
 /*html and css validation icons on a bottom right fixed position and is opaque */
