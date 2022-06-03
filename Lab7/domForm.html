@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+
+    <style>
+        body{
+            background-color:rosybrown ;
+            
+            
+        }
+        #freta{
+            font-size: 40px;
+            color:rebeccapurple;
+            font-weight:bold;
+            text-align: center;
+            margin-top:200px
+        }
+    </style>
+    <h1> Students Registration</h1>
+    <script>
+        $(function () {
+            $("#btns").click(
+                function () {
+                    let f1 = document.createElement("label")
+                    f1.innerHTML = "First Name : "
+                    $('#submitted').append(f1)
+
+                    let f2 = document.createElement('label')
+                    f2.innerHTML = document.getElementById('my').value
+                    $('#submitted').append(f2)
+                    $('#submitted').append(document.createElement('br'))
+
+                    let f3 = document.createElement('label')
+                    f3.innerHTML = "About : "
+                    $('#submitted').append(f3)
+
+                    let f4 = document.createElement('label')
+                    f4.innerHTML = document.getElementById('att').value
+                    $('#submitted').append(f4)
+
+                    $('#submitted').append(document.createElement('br'))
+
+
+                    let f5 = document.createElement('label')
+                    f5.innerHTML = "Course : "
+                    $('#submitted').append(f5)
+
+                    let f6 = document.createElement('label')
+                    f6.innerHTML = document.getElementById('cas').value
+                    $('#submitted').append(f6)
+
+                    $('#submitted').append(document.createElement('br'))
+
+                    let f7 = document.createElement('label')
+                    f7.innerHTML = "Gender : "
+                    $('#submitted').append(f7)
+
+                    let f8 = document.createElement('label')
+                    f8.innerHTML = $("input[name=gender]:checked").val()
+                    $('#submitted').append(f8)
+
+                    $('#submitted').append(document.createElement('br'))
+
+                    let f9 = document.createElement('level')
+                    f9.innerHTML = "Program : "
+                    $('#submitted').append(f9)
+
+                    let f10 = document.createElement("label")
+                    let array = []
+                    $("input[name = pro]:checked").each(function () {
+                        array.push($(this).val())
+                    });
+                    f10.innerHTML = array.toString()
+                    $("#submitted").append(f10)
+
+                    $('#submitted').append(document.createElement('br'))
+
+                    $("#freta").replaceWith($("#submitted"))
+
+
+                }
+            )
+        }
+        )
+    </script>
+
+</head>
+
+<body>
+
+    <div id="freta">
+
+
+        <div>
+            <label id="nm" for="name">First Name</label>
+            <input id="my" type="text">
+        </div>
+        <div> <label for="gender">Gender</label>
+            <input type="radio" class='gend' name="gender" value="Male">
+            Male
+            <input type="radio" class='gend' name="gender" value="Female">
+            Female
+        </div>
+        <div>
+            <label for="prog">Program</label>
+            <input type="checkbox" name="pro" id="gr" value="Gradute">Graduate
+            <input type="checkbox" name="pro" id="ud" value="Undergradute">Undergraduate
+            <input type="checkbox" name="pro" id="hg" value="High School">High School
+        </div>
+        <div>
+            <label for="course">Course</label>
+            <select id="cas">
+                <option value="select">Select</option>
+                <option value="HTML">HTML</option>
+                <option value="CSS">CSS</option>
+                <option value="Java Script">Java Script</option>
+            </select>
+        </div>
+        <div>
+            <label id="at" for="about">About</label>
+            <textarea name="txtarea" id="att" cols="30" rows="2"></textarea>
+        </div>
+
+
+
+        <button id="btns" type="submit">Submit
+        </button>
+
+        <button id="bts" type="clear">Reset
+        </button>
+
+    </div>
+    <div id="submitted"></div>
+
+</body>
+
+</html>
