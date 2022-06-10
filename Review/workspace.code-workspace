@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "..\\..\\..\\..\\..\\Downloads\\Styling\\Javascript"
+		}
+	],
+	"settings": {
+		"livePreview.defaultPreviewPath": "/index.html"
+	}
+}

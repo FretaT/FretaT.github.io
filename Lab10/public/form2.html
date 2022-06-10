@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form action="/add" method="post">
+        <div>
+            <label id="nm" for="name">First Name</label>
+            <input id="my" type="text" name="name" >
+        </div>
+        <div> <label for="gender">Gender</label>
+            <input type="radio" class='gend' name="gender" value="Male">
+            Male
+            <input type="radio" class='gend' name="gender" value="Female">
+            Female
+        </div>
+        <div>
+            <label for="prog">Program</label>
+            <input type="checkbox" name="pro" id="gr" value="Gradute">Graduate
+            <input type="checkbox" name="pro" id="ud" value="Undergradute">Undergraduate
+            <input type="checkbox" name="pro" id="hg" value="High School">High School
+        </div>
+        <div>
+            <label for="course">Course</label>
+            <select id="cas" name="course">
+                <option value="select">Select</option>
+                <option value="HTML">HTML</option>
+                <option value="CSS">CSS</option>
+                <option value="Java Script">Java Script</option>
+            </select>
+        </div>
+        <div>
+            <label id="at" for="about" name="about">About</label>
+            <textarea name="txtarea" id="att" cols="30" rows="2"></textarea>
+        </div>
+        <button id="btns" type="submit">Submit
+        </button>
+        <button id="bts" type="clear">Reset
+        </button>
+
+    </div>
+    <div id="submitted"></div>
+    </form>
+
+</body>
+</html>
