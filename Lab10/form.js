@@ -1,11 +1,11 @@
 const express = require('express');
 const app = express();
 const path = require('path');
-const bodyParser = require('body-parser');
+
 
 app.use(express.json());
-app.use(bodyParser.urlencoded({extended:true}));
-app.listen(3001,()=>{
+app.use(express.urlencoded({extended:false}));
+app.listen(3000,()=>{
     console.log('your server is running on 3000');
 })
 
@@ -43,7 +43,7 @@ app.get("/view",function(req,res,next){
 })
 
 function labelData(label,data){
-    return "<span>" + label +"-->" + data +"</span></br>"
+    return "<span>" + label +":" + data +"</span></br>"
 }
 app.use('/error',(req, res, next) => {
     res.send(error());

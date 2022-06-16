@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        let array = [{name:"Aster", age:25},{name:"Simon", age: 20},{name:"Danait",age:28},{name:"Amna",age:18}];
+        
+
+        $(function(){
+
+
+            for(let obj of array) {
+                for(let objKey in obj){
+                    $("#myUl").append("<li>" + obj[objKey] +"</li>")
+                }
+            
+            }
+
+
+
+            let row = document.createElement("tr");
+
+            for(let obj of array) {
+                let row = document.createElement("tr");
+
+                for(let objKey in obj){
+                    let column = document.createElement("td");
+                    column.innerHTML = obj[objKey];
+
+                    row.append(column);
+                }
+
+                $("#myTable").append(row)
+            }
+            
+            
+
+            array.sort((a,b) => a.age < b.age ? -1 : 1);
+            console.log(array)
+
+            let filteredArray1 =array.filter(x => {
+                return x.age < 20;
+            });
+            let filteredArray2 =array.filter(x => x.age >= 25);
+            let filteredArray3 =array.filter(x => x.name.length >= 3);
+            console.log("x.age < 20",filteredArray1)
+            console.log("age >= 25",filteredArray2)
+            console.log("name.length >= 3",filteredArray3)
+
+            let summedAge = array.reduce((a, x) => a + x.age, 0)
+            // console.log(summedAge);
+
+            let formObj = {
+                type: "text",
+                id: "textID",
+                value: ""
+            }
+
+            let input = document.createElement("input");
+            input.setAttribute("type", formOb.type);
+            input.setAttribute("id", formObj.id);
+            input.setAttribute("value", formObj.value);
+            document.body.append(input);
+
+            $(input).keyup(function(){
+                formObj.value = this.value;
+                // console.log(formObj)
+            })
+        });
+    </script>
+</head>
+<body>
+    <ul id="myUl">
+
+    </ul>
+    <table id="myTable"></table>
+
+</body>
+</html>
